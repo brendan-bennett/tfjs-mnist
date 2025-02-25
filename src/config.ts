@@ -9,7 +9,7 @@ export const metaData = {
 
 export const socialLinks = {
   personal: "https://brendanbennett.me",
-  github: "https://github.com/brendan-bennett",
+  github: "https://github.com/brendan-bennett/tfjs-mnist",
   linkedin: "https://www.linkedin.com/in/brendanjbennett/",
   email: "mailto:brendanjosephbennett@gmail.com",
 };
