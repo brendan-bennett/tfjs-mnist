@@ -2,8 +2,6 @@ import Link from "next/link";
 import { ThemeSwitch } from "./theme-switch";
 import { metaData } from "../config";
 
-const navItems = {
-};
 
 export function Navbar() {
   return (

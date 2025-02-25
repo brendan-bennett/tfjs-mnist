@@ -1,6 +1,6 @@
 export const metaData = {
   baseUrl: "https://nextfolio-template.vercel.app/",
-  title: "tfjs-msnist",
+  title: "tfjs-mnist",
   name: "Brendan Bennett",
   ogImage: "/logo.png",
   description:

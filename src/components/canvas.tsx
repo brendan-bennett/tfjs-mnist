@@ -2,18 +2,16 @@
 import { useState } from 'react'
 import { useDraw } from '../hooks/use-draw'
 import * as tf from '@tensorflow/tfjs'
-import { Trash, RotateCcw, ScanEye } from 'lucide-react';
 
 export default function Canvas({ model }) {
   const { canvasRef, onMouseDown, clear } = useDraw(drawLine)
   const [prediction, setPrediction] = useState(null)
-  const [image, setImage] = useState<string | undefined>(undefined);
 
   function drawLine({ prevPoint, currentPoint, ctx }) {
     const { x: currX, y: currY } = currentPoint
     const lineWidth = 5
 
-    let startPoint = prevPoint ?? currentPoint
+    const startPoint = prevPoint ?? currentPoint
     ctx.beginPath()
     ctx.lineWidth = lineWidth
 
@@ -42,8 +40,6 @@ export default function Canvas({ model }) {
     let tmp = [];
     const data = [];
     const image = newContext.getImageData(0 ,0 , 28, 28);
-
-    setImage(newCanvas.toDataURL('image/png'));
 
     for (let p= 0; p < image.data.length; p+= 4) {
       const value = image.data[p + 3] / 255;
