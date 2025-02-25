@@ -21,7 +21,7 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
 }
 
 export const ThemeSwitch: React.FC = () => {
-  const { setTheme, resolvedTheme } = useTheme();
+  const { setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
   const [currentTheme, setCurrentTheme] = React.useState<"light" | "dark" | null>(null);
 

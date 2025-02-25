@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [model, setModel] = useState(null);
-  const [about, setAbout] = useState(false);
 
   useEffect(() => {
     tf.loadLayersModel('/model.json').then((loadedModel) => {

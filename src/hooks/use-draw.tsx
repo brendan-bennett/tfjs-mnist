@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
+import { Draw, Point } from '../app/types/typing.d'
+
 
 export const useDraw = (onDraw: ({ ctx, currentPoint, prevPoint }: Draw) => void) => {
   const [mouseDown, setMouseDown] = useState(false)
